@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import DarkModeSwitch from './DarkModeSwitch';
-import { SignedIn,SignedOut,SignInButton,UserButton } from '@clerk/nextjs';
+import { SignedIn,SignedOut,UserButton } from '@clerk/nextjs';
 export default function Header() {
     return(
         <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
@@ -9,17 +9,17 @@ export default function Header() {
                     <UserButton/>
                 </SignedIn>
                <SignedOut>
-               {/* <Link href={'/sign-in'}>Sign in</Link> */}
-                    <SignInButton/>
+               <Link href={'/sign-in'} className='hover:text-amber-500'>Sign in</Link>
+                   
                </SignedOut>
                     
               
                 <li className='hidden sm:block'>
-                    <Link href={'/'}>Home</Link>
+                    <Link href={'/'} className='hover:text-amber-500'>Home</Link>
 
                 </li>
                 <li className='hidden sm:block'>
-                    <Link href={'/about'}>About</Link>
+                    <Link href={'/about'} className='hover:text-amber-500'>About</Link>
                 </li>    
             </ul>
             <div className="flex gap-1 items-center">
