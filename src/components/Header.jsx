@@ -19,6 +19,9 @@ export default function Header() {
 
                 </li>
                 <li className='hidden sm:block'>
+                    <Link href={'/favourites'} className='hover:text-amber-500'>Favourites</Link>
+                </li> 
+                <li className='hidden sm:block'>
                     <Link href={'/about'} className='hover:text-amber-500'>About</Link>
                 </li>    
             </ul>
